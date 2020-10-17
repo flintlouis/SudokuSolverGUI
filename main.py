@@ -17,11 +17,13 @@ def main():
 		puzzle = SUDOKUS[sys.argv[1]]
 	except:
 		usage()
-
+	os.system("clear")
+	print("Loading...")
 	surface, screen = initPygame()
 	clock = pygame.time.Clock()
 	myfont = pygame.font.SysFont("arialblack", 35)
 	settings = Settings(surface, screen, clock, myfont)
+	os.system("clear")
 
 	sudoku = Sudoku(puzzle)
 	sudoku.showSudoku(settings)
